@@ -21,7 +21,7 @@ public class Ejercicio05 {
         Antes de analizar el presente ejercicio,
         usted debe revisar y entender lo desarrollado
         en el archivo Ayuda01.java del paquete2
-        */
+         */
         Scanner entrada = new Scanner(System.in);
         String[] estudiantes = {"Kimberly", "Hogan",
             "Teresa", "Luis", "Mark", "Jennifer",
@@ -30,11 +30,23 @@ public class Ejercicio05 {
         char inicialLetra;
         boolean bandera = true;
         while (bandera) {
-            System.out.println("Ingrese una letra");
+            System.out.println("Ingrese una letra: ");
             inicial = entrada.nextLine();
-            
+
+            // Recorre el arreglo de estudiantes buscando coincidencias con la letra ingresada
+            for (String estudiante : estudiantes) {
+                // Si alguna de las primeras letras coincide, se sale del ciclo
+                if (estudiante.startsWith(inicial)) {
+                    bandera = false;
+                    break;
+                }
+            }
         }
+
+        System.out.println("Se ingresó una letra que coincide con la inicial de al menos uno de los nombres.");
 
     }
 
 }
+
+

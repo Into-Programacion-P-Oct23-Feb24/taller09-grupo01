@@ -51,7 +51,7 @@ public class Ejercicio02 {
             System.out.printf("Rango %s - valor %d\n", rangos[i],
                     valoresRangos[i]);
         }
-        System.out.printf("Valores fuera de rango: %s",fueraderango );
+        System.out.printf("Valores fuera de rango:\n%s",fueraderango );
 
     }
 

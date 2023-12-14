@@ -20,30 +20,28 @@ public class Ejercicio03 {
         double sum = 0;
 
         // Calculando la suma de los elementos en el arreglo
-        for (int num : arreglo) {
-            sum += num;
+        for (int i = 0; i < arreglo.length; i++) {
+            sum = sum + arreglo[i];
         }
 
         // Calculando la media aritmética
         double media = sum / arreglo.length;
 
         // Contadores para elementos arriba y abajo de la media
-        int arribaMedia = 0;
-        int abajoMedia = 0;
+        String arribaMedia = "Elementos arriba de la media: ";
+        String abajoMedia = "Elementos por debajo de la media: ";
 
         // Verificando cuántos elementos están arriba o abajo de la media
-        for (int num : arreglo) {
-            if (num > media) {
-                arribaMedia++;
-            } else if (num < media) {
-                abajoMedia++;
+        for (int i = 0; i < arreglo.length; i++) {
+            if (arreglo[i] > media) {
+                arribaMedia = String.format("%s%d\n", arribaMedia, arreglo[i]);
+            } else if (arreglo[i] < media) {
+                abajoMedia = String.format("%s%d\n", abajoMedia, arreglo[i]);
             }
         }
 
         // Mostrando resultados
-        System.out.println("Media aritmética: " + media);
-        System.out.println("Elementos arriba de la media: " + arribaMedia);
-        System.out.println("Elementos por debajo de la media: " + abajoMedia);
+        System.out.printf("Media aritmética: %.4f\n%s", media, arribaMedia,
+                abajoMedia);
     }
 }
-

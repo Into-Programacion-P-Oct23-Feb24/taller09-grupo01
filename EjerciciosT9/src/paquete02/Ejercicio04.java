@@ -21,7 +21,23 @@ public class Ejercicio04 {
             "Teresa Martinez", "Julia Johnson", "Mark Cook", "Jennifer Manning",
             "Juan Vasquez"};
         String[] promediosCualitativos = new String[7];
-        
-    }
+         // Asignando los valores cualitativos a cada promedio
+        for (int i = 0; i < promedios.length; i++) {
+            if (promedios[i] >= 9 && promedios[i] <= 10) {
+                promediosCualitativos[i] = "Promedio Sobresaliente";
+            } else if (promedios[i] >= 6 && promedios[i] < 8.9) {
+                promediosCualitativos[i] = "Promedio Bueno";
+            } else {
+                promediosCualitativos[i] = "Promedio Regular";
+            }
+        }
 
+        // Presentando el reporte
+        for (int i = 0; i < estudiantes.length; i++) {
+            System.out.println(estudiantes[i] + " promedio: " + promedios[i] + " promedio cualitativo: " + promediosCualitativos[i]);
+        }
+    }
 }
+    
+
+
