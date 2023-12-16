@@ -15,29 +15,33 @@ public class Ejercicio04 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         double[] promedios = {10, 10, 9.1, 7, 6.1, 4, 8};
-        String[] estudiantes = {"Kimberly Gonzalez", "Mark Hogan", 
+        String[] estudiantes = {"Kimberly Gonzalez", "Mark Hogan",
             "Teresa Martinez", "Julia Johnson", "Mark Cook", "Jennifer Manning",
             "Juan Vasquez"};
         String[] promediosCualitativos = new String[7];
-         // Asignando los valores cualitativos a cada promedio
+                                        // variable para los promedios cualitativos
         for (int i = 0; i < promedios.length; i++) {
-            if (promedios[i] >= 9 && promedios[i] <= 10) {
-                promediosCualitativos[i] = "Promedio Sobresaliente";
-            } else if (promedios[i] >= 6 && promedios[i] < 8.9) {
-                promediosCualitativos[i] = "Promedio Bueno";
+            // identificamos con un if que tipo de promedio cualitativo se le asigna
+            if ((promedios[i] >= 0) && (promedios[i] <= 5.9)) {
+                promediosCualitativos[i] = "Regular";
             } else {
-                promediosCualitativos[i] = "Promedio Regular";
+                if ((promedios[i] >= 6) && (promedios[i] <= 8.9)) {
+                    promediosCualitativos[i] = "Bueno";
+                } else {
+                    if ((promedios[i] >= 9) && (promedios[i] <= 10)) {
+                        promediosCualitativos[i] = "Sobresaliente";
+                    }
+                }
             }
         }
+        for (int i = 0; i < promedios.length; i++) {
+            System.out.printf("%s promedio: %.2f promedio cualitativo %s\n",
+                    estudiantes[i],
+                    promedios[i],
+                    promediosCualitativos[i]);
 
-        // Presentando el reporte
-        for (int i = 0; i < estudiantes.length; i++) {
-            System.out.println(estudiantes[i] + " promedio: " + promedios[i] + " promedio cualitativo: " + promediosCualitativos[i]);
         }
     }
 }
-    
-
-

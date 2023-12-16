@@ -27,26 +27,24 @@ public class Ejercicio05 {
             "Teresa", "Luis", "Mark", "Jennifer",
             "Alcides"};
         String inicial;
-        char inicialLetra;
         boolean bandera = true;
         while (bandera) {
-            System.out.println("Ingrese una letra: ");
+            System.out.println("Ingrese una letra");
             inicial = entrada.nextLine();
-
-            // Recorre el arreglo de estudiantes buscando coincidencias con la letra ingresada
-            for (String estudiante : estudiantes) {
-                // Si alguna de las primeras letras coincide, se sale del ciclo
-                if (estudiante.startsWith(inicial)) {
+            inicial = inicial.toUpperCase(); // Ponemos en mayúscula la inicial 
+                                             // ingresada por teclado
+            char letra = inicial.charAt(0); // Obtenemos el primer carácter ingresado
+            
+            for (int i = 0; i < estudiantes.length; i++) {
+                if (estudiantes[i].charAt(0) == letra) {
                     bandera = false;
-                    break;
+                    System.out.println("La letra coincide con la inicial "
+                            + "de un nombre del arreglo"); // Se presenta en pantalla
+                                        // una advertencia
+
                 }
             }
         }
-
-        System.out.println("Se ingresó una letra que coincide con la inicial de al menos uno de los nombres.");
-
     }
 
 }
-
-
