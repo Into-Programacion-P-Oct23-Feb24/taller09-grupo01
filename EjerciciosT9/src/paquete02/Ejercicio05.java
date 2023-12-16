@@ -32,15 +32,15 @@ public class Ejercicio05 {
             System.out.println("Ingrese una letra");
             inicial = entrada.nextLine();
             inicial = inicial.toUpperCase(); // Ponemos en mayúscula la inicial 
-                                             // ingresada por teclado
+            // ingresada por teclado
             char letra = inicial.charAt(0); // Obtenemos el primer carácter ingresado
-            
+
             for (int i = 0; i < estudiantes.length; i++) {
                 if (estudiantes[i].charAt(0) == letra) {
                     bandera = false;
                     System.out.println("La letra coincide con la inicial "
                             + "de un nombre del arreglo"); // Se presenta en pantalla
-                                        // una advertencia
+                    // una advertencia
 
                 }
             }
