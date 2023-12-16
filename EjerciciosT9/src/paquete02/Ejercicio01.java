@@ -23,24 +23,24 @@ public class Ejercicio01 {
         String[] rangos = {"1-5", "6-10", "11-15", "16-20"};
         int[] valoresRangos = new int[4]; // {0, 0, 0, 0}
         int respuesta;
-        
+        // En este código el error estaba en que se usa un OR para comparar
         for (int i = 0; i < respuestas.length; i++) { 
             respuesta = respuestas[i]; 
                     
-            if ((respuesta >= 1) || (respuesta <=5)){
+            if ((respuesta >= 1) && (respuesta <=5)){
                 valoresRangos[0] = valoresRangos[0] + 1;
                 
             }else{
                     
-                if ((respuesta >= 6) || (respuesta <=10)){
+                if ((respuesta >= 6) && (respuesta <=10)){
                     valoresRangos[1] = valoresRangos[1] + 1;
                 }else{
                             
-                    if ((respuesta >= 11) || (respuesta <=15)){
-                        valoresRangos[2] = valoresRangos[2] + 1; //3+1 
+                    if ((respuesta >= 11) && (respuesta <=15)){
+                        valoresRangos[2] = valoresRangos[2] + 1; // 3+1 
                     }else{
-                        if ((respuesta >= 16) || (respuesta <=20)){
-                            valoresRangos[3] = valoresRangos[3] + 1;//1+1
+                        if ((respuesta >= 16) && (respuesta <=20)){
+                            valoresRangos[3] = valoresRangos[3] + 1;// 1+1
                         }
                     
                     }
